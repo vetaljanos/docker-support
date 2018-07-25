@@ -14,9 +14,10 @@ RUN apt-get update && apt-get install -y \
   curl \
   telnet \
   groff \
+  yum \
   && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install awscli awslogs
+RUN pip3 install awscli awslogs boto3
 
 RUN curl -o /usr/local/bin/ecs-cli https://s3.amazonaws.com/amazon-ecs-cli/ecs-cli-linux-amd64-latest \
   && chmod +x /usr/local/bin/ecs-cli
