@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
   curl \
   telnet \
   groff \
-  yum \
+  vim \
   && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install awscli awslogs boto3
